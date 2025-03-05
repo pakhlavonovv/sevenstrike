@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import '../components/style.css'
@@ -8,6 +9,7 @@ const Page = () => {
     <Header/>
     </div>
     <div className="container flex flex-col gap-4 mt-9 md:gap-6 xl:flex-row xl:gap-8">
+    <Image priority className="w-[100%] rounded-md order-2 xl:order-1 md:w-[90%] lg:w-[70%] xl:w-[45%]" width={500} height={500} src={'/images/bg.jpg'} alt="About image"/>
     <div className="flex flex-col gap-1 order-1 xl:order-2">
     <h1 className="text-[18px] sm:text-[22px] md:text-[24px] lg:text-[28px]">Floxsy About</h1>
     <div className="flex flex-col gap-1 mt-1 sm:mt-3">
