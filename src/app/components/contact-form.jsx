@@ -53,7 +53,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-[95%] min-[450px]:w-[80%] sm:w-[75%] md:w-[60%] lg:w-[45%] xl:w-[35%] mx-auto p-6 bg-[#3B415C] shadow-2xl rounded-lg">
+    <div className="max-w-[95%] min-[450px]:w-[80%] sm:w-[75%] md:w-[60%] lg:w-[45%] xl:w-[35%] mx-auto p-4 min-[460px]:p-6 bg-[#3B415C] shadow-2xl rounded-lg">
       <h2 className="text-[22px] sm:text-2xl font-bold text-white text-center mb-4">Contact us</h2>
       <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-4">
         <input
