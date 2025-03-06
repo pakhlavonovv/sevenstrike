@@ -38,7 +38,7 @@ const Carousel = () => {
 
   return (
     <div className="container flex items-center justify-center">
-      <div className="relative w-full lg:w-[95%] h-[40vh] sm:h-[65vh] overflow-hidden rounded-lg">
+      <div className="relative w-full lg:w-[95%] xl:w-[85%] h-[40vh] sm:h-[65vh] overflow-hidden rounded-lg ">
         {tournaments.length > 0 ? (
           <div
             className="absolute inset-0 bg-cover bg-center transition-all duration-700"
