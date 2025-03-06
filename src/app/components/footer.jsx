@@ -29,6 +29,9 @@ const Footer = () => {
               <Link href="https://t.me/+RUy_McUwNN5kYzMy" target="_blank" className="text-gray-400 hover:text-blue-500 text-2xl">
               <i className="fa-brands fa-telegram"></i>
               </Link>
+              <Link href="https://t.me/+YZknwqrQJ81iNzRi" target="_blank" className="text-gray-400 hover:text-blue-500 text-2xl">
+              <i className="fa-solid fa-comments"></i>
+              </Link>
             </div>
           </div>
         </div>

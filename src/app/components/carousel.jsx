@@ -38,19 +38,19 @@ const Carousel = () => {
 
   return (
     <div className="container flex items-center justify-center">
-      <div className="relative w-full h-[45vh] sm:h-[65vh] overflow-hidden rounded-lg">
+      <div className="relative w-full lg:w-[95%] h-[45vh] sm:h-[65vh] overflow-hidden rounded-lg">
         {tournaments.length > 0 ? (
           <div
             className="absolute inset-0 bg-cover bg-center transition-all duration-700"
-            style={{ backgroundImage: `url(${tournaments[currentSlide]?.image || '/images/default.jpg'})` }}
+            style={{ backgroundImage: `url(${tournaments[currentSlide]?.image || '/images/dust.jpg'})` }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col gap-2 sm:flex-row items-start sm:items-center justify-between text-white text-center p-8 lg:p-12 xl:p-14">
               <div className="z-10 flex flex-col items-start">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">{tournaments[currentSlide]?.name || "Loading..."}</h2>
+                <h2 className="text-[20px] sm:text-4xl md:text-5xl font-bold">{tournaments[currentSlide]?.name || "Loading..."}</h2>
                 <p className="text-lg sm:text-xl md:text-2xl mt-2">{tournaments[currentSlide]?.map || "..."}</p>
                 <p className="text-lg sm:text-xl md:text-2xl mt-2">{tournaments[currentSlide]?.tournamenttype || "..."}</p>
                 <p className="text-md sm:text-lg md:text-xl mt-2">Prize: <span className="text-green-500 text-[25px]">${tournaments[currentSlide]?.price || "0"}</span></p>
-                <Link href={'https://t.me/pakhlavonov177'} target="_blank" className="mt-4 px-6 py-3 bg-[#3281AC] transition-all hover:border-[1px] hover:border-gray-300 hover:bg-transparent hover:shadow-xl rounded-lg text-white font-semibold text-lg">
+                <Link href={'https://t.me/pakhlavonov177'} target="_blank" className="mt-4 px-6 py-3 bg-[#3281AC] transition-all hover:border-[1px] hover:border-gray-300 hover:bg-transparent hover:shadow-xl rounded-lg text-white font-semibold text-[14px] md:text-[16px] xl:text-[20px]">
                   Register now
                 </Link>
               </div>
@@ -61,7 +61,7 @@ const Carousel = () => {
           </div>
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-            <p className="text-2xl">Loading...</p>
+            <p className="text-[16px] sm:text-2xl">Loading...</p>
           </div>
         )}
         <button

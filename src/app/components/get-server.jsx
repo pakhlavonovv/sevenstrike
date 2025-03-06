@@ -17,7 +17,7 @@ const GetServer = () => {
           </ul>
         </div>
 
-        <div className="lg:w-2/2 order-1 lg:order-2 w-[90%] sm:w-[70%] flex justify-center">
+        <div className="lg:w-2/2 order-1 lg:order-2 w-[99%]  sm:w-[70%] flex justify-center">
           <Image
           width={500}
           height={500}
