@@ -55,7 +55,7 @@ const Carousel = () => {
                 </Link>
               </div>
               <div className="hidden sm:flex absolute bottom-0 right-0">
-                <Image width={700} height={700} alt="character image" src={'/images/cs.webp'}/>
+                <Image width={500} height={500} alt="character image" src={'/images/carousel-ch.png'}/>
               </div>
             </div>
           </div>

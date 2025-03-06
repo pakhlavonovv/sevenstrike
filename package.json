@@ -1,5 +1,5 @@
 {
-  "name": "floxsy-store",
+  "name": "seven-strike",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "firebase": "^11.1.0",
-    "next": "15.1.3",
+    "next": "^15.1.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.33.5"
