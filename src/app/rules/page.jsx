@@ -7,8 +7,8 @@ export default function Rules() {
             <div className="mb-[20px]">
             <Header/>
             </div>
-      <div className="min-h-screen text-white p-6 md:p-12">
-        <div className="max-w-4xl mx-auto bg-gray-800 p-6 md:p-10 rounded-lg shadow-lg">
+      <div className="min-h-screen text-white p-3 md:p-12">
+        <div className="max-w-[99%] md:max-w-4xl mx-auto bg-gray-800 p-6 md:p-10 rounded-lg shadow-lg">
           <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-yellow-400 mb-6 text-center">SevenStrike Tournament Rules</h1>
           
           <div className="space-y-4">
