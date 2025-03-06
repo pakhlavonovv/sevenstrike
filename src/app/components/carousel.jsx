@@ -38,7 +38,7 @@ const Carousel = () => {
 
   return (
     <div className="container flex items-center justify-center">
-      <div className="relative w-full lg:w-[95%] xl:w-[85%] h-[40vh] sm:h-[65vh] overflow-hidden rounded-lg ">
+      <div className="relative w-full lg:w-[95%] xl:w-[85%] h-[45vh] sm:h-[65vh] overflow-hidden rounded-lg ">
         {tournaments.length > 0 ? (
           <div
             className="absolute inset-0 bg-cover bg-center transition-all duration-700"
@@ -52,7 +52,7 @@ const Carousel = () => {
                 <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.time || "Undefined"}</p>
                 <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">Can participate: 10 Teams</p>
                 <p className="text-md sm:text-lg md:text-xl sm:mt-2">Prize: <span className="text-green-500 text-[25px]">${tournaments[currentSlide]?.price || "0"}</span></p>
-                <Link href={'https://t.me/pakhlavonov177'} target="_blank" className="mt-1 sm:mt-4 px-6 py-3 bg-[#3281AC] transition-all hover:border-[1px] hover:border-gray-300 hover:bg-transparent hover:shadow-xl rounded-lg text-white font-semibold text-[14px] md:text-[16px] xl:text-[20px]">
+                <Link href={'https://t.me/pakhlavonov177'} target="_blank" className="mt-1 sm:mt-4 px-6 py-2 bg-[#3281AC] transition-all hover:border-[1px] hover:border-gray-300 hover:bg-transparent hover:shadow-xl rounded-lg text-white text-[14px] md:text-[16px] xl:text-[20px]">
                   Register now
                 </Link>
               </div>
