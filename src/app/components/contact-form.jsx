@@ -53,9 +53,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-[#3B415C] shadow-2xl rounded-lg">
-      <h2 className="text-2xl font-bold text-white text-center mb-4">Contact us</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="max-w-[95%] min-[450px]:w-[80%] sm:w-[75%] md:w-[60%] lg:w-[45%] xl:w-[35%] mx-auto p-6 bg-[#3B415C] shadow-2xl rounded-lg">
+      <h2 className="text-[22px] sm:text-2xl font-bold text-white text-center mb-4">Contact us</h2>
+      <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-4">
         <input
           type="text"
           name="name"
@@ -63,7 +63,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full bg-gray-200 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="w-full text-[14px] sm:text-[16px] xl:text-[18px] bg-gray-200 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
         <input
           type="email"
@@ -72,7 +72,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full bg-gray-200 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="w-full text-[14px] sm:text-[16px] xl:text-[18px] bg-gray-200 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
         <input
           type="tel"
@@ -81,7 +81,7 @@ const ContactForm = () => {
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full bg-gray-200 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="w-full text-[14px] sm:text-[16px] xl:text-[18px] bg-gray-200 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
         <input
           type="text"
@@ -90,7 +90,7 @@ const ContactForm = () => {
           value={formData.theme}
           onChange={handleChange}
           required
-          className="w-full bg-gray-200 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="w-full text-[14px] sm:text-[16px] xl:text-[18px] bg-gray-200 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
         <textarea
           name="message"
@@ -99,11 +99,11 @@ const ContactForm = () => {
           onChange={handleChange}
           required
           rows="4"
-          className="w-full bg-gray-200 h-[150px] md:h-[200px] resize-none p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="w-full text-[14px] sm:text-[16px] xl:text-[18px] bg-gray-200 h-[150px] md:h-[200px] resize-none p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
         ></textarea>
         <button
           type="submit"
-          className="w-full bg-black text-white py-3 rounded-lg hover:bg-[#0000002f] transition duration-300"
+          className="w-full text-[14px] sm:text-[16px] xl:text-[18px] bg-black text-white py-3 rounded-lg hover:bg-[#0000002f] transition duration-300"
           disabled={loading}
         >
           {loading ? "Sending..." : "Send"}
