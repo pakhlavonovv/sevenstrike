@@ -32,7 +32,7 @@ const Carousel = () => {
 
   useEffect(() => {
     if (tournaments.length === 0) return;
-    const interval = setInterval(handleNext, 3000);
+    const interval = setInterval(handleNext, 5000);
     return () => clearInterval(interval);
   }, [tournaments]);
 
