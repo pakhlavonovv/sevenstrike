@@ -12,6 +12,9 @@ const Header = () => {
 
   return (
     <div className="w-full">
+      <div className="w-full bg-black flex items-center justify-center p-2 text-white">
+        <h2 className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-center'>Did you know that for just <span className='text-[#378ebd]'>$20</span>, you can win cash prizes ranging from <span className='text-green-500'>$130</span> to <span className='text-green-500'>$700</span>, either with your team or alone?</h2>
+      </div>
       <header className="flex items-center justfiy-center bg-[url('/images/bg.jpg')] bg-cover bg-center h-[100px] md:h-[120px] lg:h-[140px] shadow-lg lg:shadow-xl">
       <div className='container flex items-center justify-between relative'>
         <i>
