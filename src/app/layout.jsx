@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="YdsWb5b6kdswkM6qurKloRy1uYGyCs4P5aHj1Ah4-pk" />
         <meta name="author" content="SevenStrike" />
         <meta
           name="description"
@@ -34,7 +35,7 @@ export default function RootLayout({ children }) {
           content="Join the ultimate Counter-Strike 2 esports event! Compete, win, and prove your dominance in the SevenStrike Online CS2 Tournament."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sevenstrike.gg" />
+        <meta property="og:url" content="https://www.sevenstrike.online/" />
         <meta property="og:site_name" content="SevenStrike" />
         <link rel="icon" href="favicon.ico?v=2" />
         <link
