@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="keywords"
-          content="CS2 tournament, online gaming, esports competition, Counter-Strike 2, pro gaming, competitive play"
+          content="CS2 tournament, sevenstrike, online gaming, esports competition, Counter-Strike 2, pro gaming, competitive play"
         />
         <meta property="og:title" content="SevenStrike Online CS2 Tournament" />
         <meta
