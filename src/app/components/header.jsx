@@ -13,9 +13,9 @@ const Header = () => {
   return (
     <div className="w-full">
       <div className="w-full bg-black flex items-center justify-center p-2 text-white">
-        <h2 className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-center'>Did you know that for just <span className='text-[#378ebd]'>$20</span>, you can win cash prizes ranging from <span className='text-green-500'>$130</span> to <span className='text-green-500'>$700</span>, either with your team or alone?</h2>
+        <h2 className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-center'>Регистрируйтесь сейчас и побеждайте вместе со своей командой в наших турнирах с денежными призами!</h2>
       </div>
-      <header className="flex items-center justfiy-center bg-[url('/images/bg.jpg')] bg-cover bg-center h-[100px] md:h-[120px] lg:h-[140px] shadow-lg lg:shadow-xl">
+      <header className="flex items-center justfiy-center bg-[url('/images/bg.jpg')] bg-cover bg-center h-[70px] md:h-[80px] lg:h-[100px] shadow-lg lg:shadow-xl">
       <div className='container flex items-center justify-between relative'>
         <i>
         <h1 className="text-[#2C2F44] text-[30px] cursor-pointer font-extrabold sm:text-[35px] md:text-[40px] lg:text-[45px]">SevenStrike</h1>
@@ -23,29 +23,24 @@ const Header = () => {
 
         <ul className="hidden md:flex items-center gap-3">
           <li>
-            <Link className="font-semibold text-gray-300 transition-all hover:text-[#4ac0ff]" href={'/'}>
-              Home
+            <Link className="font-semibold text-gray-300 transition-all hover:text-[#4ac0ff] hover:underline" href={'/'}>
+              Главная
             </Link>
           </li>
           <li>
-            <Link className="font-semibold text-gray-300 transition-all hover:text-[#4ac0ff]" href={'/contact'}>
-              Contact
+            <Link className="font-semibold text-gray-300 transition-all hover:text-[#4ac0ff] hover:underline" href={'/contact'}>
+              Связаться
             </Link>
           </li>
           <li>
-            <Link className="font-semibold text-gray-300 transition-all hover:text-[#4ac0ff]" href={'/about'}>
-              About us
-            </Link>
-          </li>
-          <li>
-            <Link className="font-semibold text-gray-300 transition-all hover:text-[#4ac0ff]" href={'/faq'}>
-              FAQ
+            <Link className="font-semibold text-gray-300 transition-all hover:text-[#4ac0ff] hover:underline" href={'/about'}>
+              О нас
             </Link>
           </li>
         </ul>
 
         <aside className="flex items-center gap-2 md:hidden">
-          <Link href={'/rules'} className='text-[16px] text-[#378ebd] sm:text-[18px]'>Rules</Link>
+          <Link href={'/rules'} className='text-[16px] text-[#378ebd] sm:text-[18px] underline'>Правила</Link>
           <button onClick={toggleSidebar}>
             <i className="fa-solid fa-bars fa-xl text-gray-400"></i>
           </button>
@@ -55,7 +50,7 @@ const Header = () => {
           href={'/rules'}
           className="hidden min-[841px]:flex items-center justify-center bg-[#3281AC] text-white w-[140px] h-[40px] rounded-md hover:border-[1px] hover:border-[#E38617] transition-all hover:bg-transparent hover:text-[#E38617]"
         >
-          Rules
+          Правила
         </Link>
 
         <div
@@ -69,22 +64,17 @@ const Header = () => {
           <ul className="flex flex-col gap-4 mt-10">
             <li>
               <Link className="text-white text-[12px] sm:text-[14px] hover:text-gray-300" href={'/'}>
-                Home
+                Главная
               </Link>
             </li>
             <li>
               <Link className="text-white text-[12px] sm:text-[14px] hover:text-gray-300" href={'/contact'}>
-                Contact
+                Связаться
               </Link>
             </li>
             <li>
               <Link className="text-white text-[12px] sm:text-[14px] hover:text-gray-300" href={'/about'}>
-                About us
-              </Link>
-            </li>
-            <li>
-              <Link className="text-white text-[12px] sm:text-[14px] hover:text-gray-300" href={'/faq'}>
-                FAQ
+                О нас
               </Link>
             </li>
           </ul>

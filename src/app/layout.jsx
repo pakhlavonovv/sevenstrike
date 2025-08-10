@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <meta name="author" content="SevenStrike" />
         <meta
           name="description"
-          content="SevenStrike Online CS2 Tournament - Compete against top players, showcase your skills, and win amazing prizes!"
+          content="Турниры SevenStrike Online CS2 — соревнуйтесь с лучшими игроками, продемонстрируйте свои навыки и выиграйте потрясающие призы!"
         />
         <meta
           name="keywords"
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content="SevenStrike Online CS2 Tournament" />
         <meta
           property="og:description"
-          content="Join the ultimate Counter-Strike 2 esports event! Compete, win, and prove your dominance in the SevenStrike Online CS2 Tournament."
+          content="Присоединяйтесь к грандиозному киберспортивному событию Counter-Strike 2! Соревнуйтесь, побеждайте и докажите свое превосходство в онлайн-турнире SevenStrike CS2."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.sevenstrike.online/" />
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <title>SevenStrike Online CS2 Tournament - Compete & Win!</title>
+        <title>SevenStrike Online CS2 — соревнуйтесь и побеждайте!</title>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} style={{ fontFamily: "'Orbitron', sans-serif" }}>
         {children}

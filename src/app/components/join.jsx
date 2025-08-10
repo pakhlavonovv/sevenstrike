@@ -8,21 +8,20 @@ const Join = () => {
       <div className="max-w-6xl mx-auto flex flex-col gap-[20px] sm:gap-[40px] md:gap-[50px] lg:gap-[60px] lg:flex-row items-center">
         <div className="order-2 lg:order-1 lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-300 mb-4">
-          How to Join?
+          Как присоединиться?
           </h2>
           <ul className="list-disc list-inside text-gray-300 text-lg mb-6">
-            <li>Create a team</li>
-            <li>Choose tournament map</li>
-            <li>Register to tournament</li>
-            <li>Join the server in the game</li>
-            <li>Follow the results in our telegram channel</li>
+            <li>Создайте команду</li>
+            <li>Зарегистрироваться на турнир</li>
+            <li>Присоединяйтесь к серверу в игре</li>
+            <li>Следите за результатами в нашем телеграм-канале</li>
           </ul>
           <Link
             href={"https://t.me/+RUy_McUwNN5kYzMy"}
             target="_blank"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium transition hover:bg-blue-700"
           >
-            Telegram channel
+            Телеграм канал
           </Link>
         </div>
 

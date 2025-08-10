@@ -1,5 +1,6 @@
 import Header from '../app/components/header'
 import Carousel from '../app/components/carousel'
+import Prizes from '../app/components/prizes'
 import Join from '../app/components/join'
 import GetServer from '../app/components/get-server'
 import Community from '../app/components/community'
@@ -10,6 +11,9 @@ const Page = () => {
       <Header/>
       <div className="mt-[50px]">
       <Carousel/>
+      </div>
+      <div className="mt-[50px]">
+      <Prizes/>
       </div>
       <div className="mt-[50px]">
       <Join/>

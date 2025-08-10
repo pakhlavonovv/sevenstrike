@@ -7,13 +7,10 @@ const GetServer = () => {
       <div className="max-w-6xl mx-auto flex flex-col gap-[20px] sm:gap-[40px] md:gap-[50px] lg:gap-[60px] lg:flex-row items-center">
         <div className="order-2 lg:order-1 lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
           <h2 className="text-3xl md:text-4xl font-bold bg-black p-4 rounded-md text-gray-300 mb-4">
-          How do I access the tournament map server?
+          Как получить доступ к серверу карт турнира?
           </h2>
           <ul className="list-disc list-inside text-gray-600 p-4 text-lg mb-6">
-            <li>Create a team</li>
-            <li>Choose tournament map</li>
-            <li>Register to tournament</li>
-            <li>Join the private channel, which gives a link to the channel (administrator of SevenStrike) to the team leader</li>
+            <li>После регистрации вашей команды вам будет предоставлена ссылка для вступления в группу Телеграм, в которую вам будет предложено вступить вместе с вашей командой. Группа будет состоять из вашей команды и случайного соперника. Сервер будет предоставлен группе после подтверждения времени проведения турнира.</li>
           </ul>
         </div>
 

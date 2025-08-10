@@ -8,15 +8,15 @@ const Community = () => {
       <div className="max-w-6xl mx-auto flex flex-col gap-[20px] sm:gap-[40px] md:gap-[50px] lg:gap-[60px] lg:flex-row items-center">
         <div className="flex flex-col gap-2 order-2 lg:order-1 lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
           <h2 className="text-3xl md:text-3xl font-bold rounded-md text-gray-300 mb-4">
-          Don't want to miss out on Counter Strike 2 news and tournament information?
+          Не хотите пропустить новости о Counter Strike 2 и информацию о турнирах?
           </h2>
-          <p>Of course, tournament statistics, answers, MVP players, and information about Counter Strike 2 are all available on our Telegram channel, and you also have the opportunity to assemble a team for yourself in the Telegram channel group!</p>
+          <p>Конечно же, статистика турнира, ответы, МВП-игроки и информация о Counter Strike 2 доступны в нашем Телеграм-канале, а также у вас есть возможность собрать команду для себя в группе Телеграм-канала!</p>
           <Link
             href={"https://t.me/+RUy_McUwNN5kYzMy"}
             target="_blank"
             className="bg-black flex items-center justify-center text-white px-6 py-3 rounded-lg text-lg font-medium transition hover:bg-[#0000008a]"
           >
-            Join to channel
+            Присоединиться к каналу
           </Link>
         </div>
 

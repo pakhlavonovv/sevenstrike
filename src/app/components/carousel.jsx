@@ -46,14 +46,13 @@ const Carousel = () => {
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col gap-2 sm:flex-row items-start sm:items-center justify-between text-white text-center p-8 lg:p-12 xl:p-14">
               <div className="z-10 flex flex-col items-start">
-                <h2 className="text-[25px] sm:text-4xl md:text-5xl font-bold">{tournaments[currentSlide]?.name || "Loading..."}</h2>
-                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.map || "Map is not found"}</p>
-                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.tournamenttype || "Undefined"}</p>
-                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.time || "Undefined"}</p>
-                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">Can participate: 10 Teams</p>
-                <p className="text-md sm:text-lg md:text-xl sm:mt-2">Prize: <span className="text-green-500 text-[25px]">{tournaments[currentSlide]?.price || "0"} Ruble</span></p>
+                <h2 className="text-[25px] sm:text-4xl md:text-5xl font-bold">{tournaments[currentSlide]?.name || "Загрузка..."}</h2>
+                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.map || "Карта не найдена"}</p>
+                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.tournamenttype || "Неопределенный"}</p>
+                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.time || "Неопределенный"}</p>
+                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">Могут участвовать: 10 команд</p>
                 <Link href={'https://t.me/pakhlavonov177'} target="_blank" className="mt-1 sm:mt-4 px-6 py-2 bg-[#3281AC] transition-all hover:border-[1px] hover:border-gray-300 hover:bg-transparent hover:shadow-xl rounded-lg text-white text-[14px] md:text-[16px] xl:text-[20px]">
-                  Register now
+                  Зарегистрируйтесь сейчас
                 </Link>
               </div>
               <div className="hidden sm:flex absolute bottom-0 right-0">
@@ -63,7 +62,7 @@ const Carousel = () => {
           </div>
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-            <p className="text-[16px] sm:text-2xl">Loading...</p>
+            <p className="text-[16px] sm:text-2xl">Загрузка...</p>
           </div>
         )}
         <button

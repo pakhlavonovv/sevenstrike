@@ -54,12 +54,12 @@ const ContactForm = () => {
 
   return (
     <div className="max-w-[95%] min-[450px]:w-[80%] sm:w-[75%] md:w-[60%] lg:w-[45%] xl:w-[35%] mx-auto p-4 min-[460px]:p-6 bg-[#3B415C] shadow-2xl rounded-lg">
-      <h2 className="text-[22px] sm:text-2xl font-bold text-white text-center mb-4">Contact us</h2>
+      <h2 className="text-[22px] sm:text-2xl font-bold text-white text-center mb-4">Свяжитесь с нами</h2>
       <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-4">
         <input
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder="Имя"
           value={formData.name}
           onChange={handleChange}
           required
@@ -68,7 +68,7 @@ const ContactForm = () => {
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="Электронная почта"
           value={formData.email}
           onChange={handleChange}
           required
@@ -77,7 +77,7 @@ const ContactForm = () => {
         <input
           type="tel"
           name="phone"
-          placeholder="Phone number"
+          placeholder="Номер телефона"
           value={formData.phone}
           onChange={handleChange}
           required
@@ -86,7 +86,7 @@ const ContactForm = () => {
         <input
           type="text"
           name="theme"
-          placeholder="Theme"
+          placeholder="Тема"
           value={formData.theme}
           onChange={handleChange}
           required
@@ -94,7 +94,7 @@ const ContactForm = () => {
         />
         <textarea
           name="message"
-          placeholder="Message"
+          placeholder="Сообщение"
           value={formData.message}
           onChange={handleChange}
           required
@@ -106,20 +106,20 @@ const ContactForm = () => {
           className="w-full text-[14px] sm:text-[16px] xl:text-[18px] bg-black text-white py-3 rounded-lg hover:bg-[#0000002f] transition duration-300"
           disabled={loading}
         >
-          {loading ? "Sending..." : "Send"}
+          {loading ? "Отправка..." : "Отправить"}
         </button>
       </form>
 
       {modalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center  w-[80%] sm:w-[70%] md:w-[40%] lg:w-[30%] xl:w-[25%]">
-            <h3 className="text-xl font-bold mb-2">Message sent!</h3>
-            <p className="text-gray-600">We will contact you shortly.</p>
+            <h3 className="text-xl font-bold mb-2">Сообщение отправлено!</h3>
+            <p className="text-gray-600">Мы свяжемся с вами в ближайшее время.</p>
             <button
               onClick={() => setModalOpen(false)}
               className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
             >
-              Thank you, I understand.
+              Хорошо
             </button>
           </div>
         </div>
