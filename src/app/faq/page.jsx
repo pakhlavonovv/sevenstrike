@@ -4,29 +4,29 @@ import Header from "../components/header";
 export default function FAQ() {
     const faqs = [
       {
-        question: "How do I register for a tournament?",
+        question: "Как зарегистрироваться на турнир?",
         answer:
-          "To join a SevenStrike CS2 tournament, browse available tournaments, pay the entry fee, and secure your spot in the competition.",
+          "Чтобы принять участие в турнире SevenStrike CS2, просмотрите доступные турниры, оплатите вступительный взнос и обеспечьте себе место в соревновании.",
       },
       {
-        question: "How is the prize fund awarded to the winning team?",
+        question: "Как призовой фонд распределяется между командами-победителями?",
         answer:
-          "For each SevenStrike tournament, your team leader will register for the team, i.e. pay for the team, and join the tournament. At the end of the tournament, if your team wins, we will transfer the prize money to the leader, while linking it to your team leader.",
+          "Для каждого турнира SevenStrike лидер вашей команды будет регистрировать команду, т. е. оплачивать участие команды, и присоединяться к турниру. По окончании турнира, если ваша команда выиграет, мы перечислим призовые деньги лидеру, привязав их к лидеру вашей команды.",
       },
       {
-        question: "What payment methods are available for deposits and withdrawals?",
+        question: "Какие способы оплаты доступны для пополнения счета и вывода средств?",
         answer:
-          "It doesn't matter, during the tournament payment process, the administrator will assign a card number to the team leader, and your leader will make the payment. If the money needs to be transferred from us, we will also request the VISA card number and card expiration date from your team leader and transfer the prize.",
+          "Не беда, во время турнира администратор сообщит номер карты капитану команды, и ваш капитан произведёт оплату. Если деньги нужно будет перевести от нас, мы запросим номер карты Uzcard или Humo у вашего руководителя команды и перечислим приз.",
       },
       {
-        question: "Are there any rules or restrictions?",
+        question: "Есть ли какие-либо правила или ограничения?",
         answer:
-          "Yes, each tournament has its own rules regarding player conduct, cheating, and fair play. Violating these rules may result in disqualification.",
+          "Да, каждый турнир имеет свои собственные правила, касающиеся поведения игроков, мошенничества и честной игры. Нарушение этих правил может привести к дисквалификации.",
       },
       {
-        question: "How do I contact support?",
+        question: "Как связаться со службой поддержки?",
         answer:
-          "If you need assistance, you can reach out to our support team via live chat or email. We are available 24/7 to help you.",
+          "Если вам нужна помощь, вы можете связаться с нашей службой поддержки через онлайн-чат или по электронной почте. Мы готовы помочь вам круглосуточно и без выходных.",
       },
     ];
   
@@ -37,7 +37,7 @@ export default function FAQ() {
             </div>
       <div className="min-h-screen text-white flex justify-center items-center p-4">
         <div className="max-w-3xl w-full">
-          <h1 className="text-[22px] sm:text-[27px] lg:text-[35px] font-bold text-center mb-6 text-black">Frequently Asked Questions</h1>
+          <h1 className="text-[22px] sm:text-[27px] lg:text-[35px] font-bold text-center mb-6 text-black">Часто задаваемые вопросы</h1>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div
