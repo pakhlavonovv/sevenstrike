@@ -50,9 +50,9 @@ const Carousel = () => {
                 <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.map || "Карта не найдена"}</p>
                 <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.tournamenttype || "Неопределенный"}</p>
                 <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">{tournaments[currentSlide]?.time || "Неопределенный"}</p>
-                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">Могут участвовать: 12 команд</p>
+                <p className="text-lg sm:text-xl md:text-2xl sm:mt-2">Должны участвовать: 10 команд</p>
                 <Link href={'https://t.me/sevenstrikee'} target="_blank" className="mt-1 sm:mt-4 px-6 py-2 bg-[#3281AC] transition-all hover:border-[1px] hover:border-gray-300 hover:bg-transparent hover:shadow-xl rounded-lg text-white text-[14px] md:text-[16px] xl:text-[20px]">
-                  Зарегистрируйтесь сейчас
+                  Бесплатная регистрация
                 </Link>
               </div>
               <div className="hidden sm:flex absolute bottom-0 right-0">
