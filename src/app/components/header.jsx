@@ -37,6 +37,11 @@ const Header = () => {
               О нас
             </Link>
           </li>
+           <li>
+            <Link className="font-semibold text-gray-300 transition-all hover:text-[#4ac0ff] hover:underline" href={'/chat'}>
+              Чат и торговля
+            </Link>
+          </li>
         </ul>
 
         <aside className="flex items-center gap-2 md:hidden">
@@ -75,6 +80,11 @@ const Header = () => {
             <li>
               <Link className="text-white text-[12px] sm:text-[14px] hover:text-gray-300" href={'/about'}>
                 О нас
+              </Link>
+            </li>
+             <li>
+              <Link className="text-white text-[12px] sm:text-[14px] hover:text-gray-300" href={'/chat'}>
+                Чат и торговля
               </Link>
             </li>
           </ul>

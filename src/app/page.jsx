@@ -9,10 +9,10 @@ const Page = () => {
   return (
     <div>
       <Header/>
-      <div className="mt-[50px]">
+      <div className="mt-[30px]">
       <Carousel/>
       </div>
-      <div className="mt-[50px]">
+      <div>
       <Prizes/>
       </div>
       <div className="mt-[50px]">
