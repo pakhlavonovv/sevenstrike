@@ -1,14 +1,21 @@
 'use client'
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './style.css';
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [username, setUsername] = useState(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+    useEffect(() => {
+    const storedName = localStorage.getItem("username");
+    if (storedName) {
+      setUsername(storedName);
+    }
+  }, []);
 
   return (
     <div className="w-full">
@@ -45,7 +52,7 @@ const Header = () => {
         </ul>
 
         <aside className="flex items-center gap-2 lg:hidden">
-          <Link href={'/register'} className='text-[16px] text-[#378ebd] sm:text-[18px] underline'>Регистрация</Link>
+          <Link href={'/register'} className='text-[16px] text-[#378ebd] sm:text-[18px] underline'>{username && username.length <= 8 ? username : "Регистрация"}</Link>
           <button onClick={toggleSidebar}>
             <i className="fa-solid fa-bars fa-xl text-gray-400"></i>
           </button>
@@ -55,7 +62,7 @@ const Header = () => {
           href={'/register'}
           className="hidden lg:flex items-center justify-center bg-[#3281AC] text-white w-[140px] h-[40px] rounded-md hover:border-[1px] hover:border-[#E38617] transition-all hover:bg-transparent hover:text-[#E38617]"
         >
-          Регистрация
+          {username && username.length <= 8 ? username : "Регистрация"}
         </Link>
 
         <div
