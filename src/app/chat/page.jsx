@@ -26,9 +26,10 @@ const Page = () => {
         </div>
         <div className="flex flex-col max-h-[450px] bg-[#0000006d] aspect-[9/10] overflow-hidden rounded-2xl">
         <Image src={Tournaments} className="w-full rounded-lg " alt="Counter stike 2 image"/>
-        <div className="flex flex-col justify-between p-2 h-64">
-  <p className="text-gray-300 text-[14px]">Lorem ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim hic odit perferendis, iste, assumenda placeat praesentium asperiores laudantium fugiat debitis! Animi praesentium, excepturi aut saepe tempora temporibus rem laboriosam totam laborum sapiente et.</p>
-  <Link className="text-gray-100 w-full bg-[#4ac0ff] h-[40px] rounded-md flex items-center justify-center transition-all hover:bg-[#4ac0ffc6]" 
+        <div className="flex flex-col justify-between p-2 pb-5 h-64">
+  <p className="text-gray-300 text-[12px] sm:text-[14px]">Прими участие в нашем CS2 турнире!
+Это отличная возможность показать свои навыки и провести время с единомышленниками. Турнир абсолютно бесплатный, и каждый желающий может попробовать свои силы. В одном турнире участвует до 10 команд, что делает соревнование ещё более увлекательным и напряжённым. Собери свою команду, вступай в игру и докажи, что именно вы достойны победы!</p>
+  <Link className="text-gray-100 w-full text-[14px] sm:text-[16px] bg-[#4ac0ff] h-[30px] sm:h-[40px] rounded-md flex items-center justify-center transition-all hover:bg-[#4ac0ffc6]" 
         href="https://t.me/sevenstrikee">
     Зарегистрироваться
   </Link>

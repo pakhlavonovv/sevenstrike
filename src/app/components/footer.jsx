@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-3">Follow Us</h3>
+            <h3 className="text-xl font-semibold mb-3">Подписывайтесь на нас</h3>
             <div className="flex justify-center md:justify-start space-x-4">
               <Link href="https://t.me/+RUy_McUwNN5kYzMy" target="_blank" className="text-gray-400 hover:text-blue-500 text-2xl">
               <i className="fa-brands fa-telegram"></i>

@@ -12,9 +12,9 @@ const Header = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full bg-black flex items-center justify-center p-2 text-white">
+      {/* <div className="w-full bg-black flex items-center justify-center p-2 text-white">
         <h2 className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-center'>Регистрируйтесь сейчас и побеждайте вместе со своей командой в наших турнирах с денежными призами!</h2>
-      </div>
+      </div> */}
       <header className="flex items-center justfiy-center bg-[url('/images/bg.jpg')] bg-cover bg-center h-[70px] md:h-[80px] lg:h-[100px] shadow-lg lg:shadow-xl">
       <div className='container flex items-center justify-between relative'>
         <i>
@@ -44,18 +44,18 @@ const Header = () => {
           </li>
         </ul>
 
-        <aside className="flex items-center gap-2 md:hidden">
-          <Link href={'/rules'} className='text-[16px] text-[#378ebd] sm:text-[18px] underline'>Правила</Link>
+        <aside className="flex items-center gap-2 lg:hidden">
+          <Link href={'/register'} className='text-[16px] text-[#378ebd] sm:text-[18px] underline'>Регистрация</Link>
           <button onClick={toggleSidebar}>
             <i className="fa-solid fa-bars fa-xl text-gray-400"></i>
           </button>
         </aside>
 
         <Link
-          href={'/rules'}
-          className="hidden min-[841px]:flex items-center justify-center bg-[#3281AC] text-white w-[140px] h-[40px] rounded-md hover:border-[1px] hover:border-[#E38617] transition-all hover:bg-transparent hover:text-[#E38617]"
+          href={'/register'}
+          className="hidden lg:flex items-center justify-center bg-[#3281AC] text-white w-[140px] h-[40px] rounded-md hover:border-[1px] hover:border-[#E38617] transition-all hover:bg-transparent hover:text-[#E38617]"
         >
-          Правила
+          Регистрация
         </Link>
 
         <div
