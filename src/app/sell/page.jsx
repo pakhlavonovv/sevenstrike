@@ -21,7 +21,7 @@ const Page = () => {
   const [loading, setLoading] = useState(false)
   const [notif, setNotif] = useState(false)
 
-  const [contactType, setContactType] = useState("telegram") // telegram yoki email
+  const [contactType, setContactType] = useState("telegram") 
 
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -56,10 +56,8 @@ const Page = () => {
       }
     }
 
-    // Narx formatlash
     const finalPrice = `${formData.price} ${formData.currency}`
 
-    // Kontaktni formatlash
     let finalContact = formData.sellerContact
     if (contactType === "telegram") {
       const username = formData.sellerContact.replace("@", "")
@@ -103,7 +101,6 @@ const Page = () => {
           <h2 className="text-white text-2xl font-bold mb-4 text-center">Добавить аккаунт</h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             
-            {/* Название аккаунта */}
             <input 
               type="text" 
               name="name" 
@@ -114,7 +111,6 @@ const Page = () => {
               required
             />
 
-            {/* Название игры */}
             <input 
               type="text" 
               name="game" 
@@ -124,7 +120,6 @@ const Page = () => {
               className="bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
             />
 
-            {/* Изображение */}
             <input 
               type="file"
               accept="image/*"
@@ -132,7 +127,6 @@ const Page = () => {
               className="text-white"
             />
 
-            {/* Описание */}
             <textarea
               name="description" 
               value={formData.description} 
@@ -143,7 +137,6 @@ const Page = () => {
               minLength={100}
             />
 
-            {/* Цена + Валюта */}
             <div className="flex gap-2">
               <input 
                 type="number" 
@@ -168,7 +161,6 @@ const Page = () => {
               </select>
             </div>
 
-            {/* Контакт */}
             <div className="flex gap-2">
               <select
                 value={contactType}
@@ -189,7 +181,6 @@ const Page = () => {
               />
             </div>
 
-            {/* Кнопка */}
             <button 
               type="submit"
               disabled={loading}
