@@ -14,11 +14,14 @@ const Page = () => {
     image: '',
     description: '',
     price: '',
+    currency: 'USD',
     sellerContact: ''
   })
   const [file, setFile] = useState(null)
   const [loading, setLoading] = useState(false)
   const [notif, setNotif] = useState(false)
+
+  const [contactType, setContactType] = useState("telegram") // telegram yoki email
 
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -53,14 +56,30 @@ const Page = () => {
       }
     }
 
+    // Narx formatlash
+    const finalPrice = `${formData.price} ${formData.currency}`
+
+    // Kontaktni formatlash
+    let finalContact = formData.sellerContact
+    if (contactType === "telegram") {
+      const username = formData.sellerContact.replace("@", "")
+      finalContact = `https://t.me/${username}`
+    }
+
     try {
-      await addDoc(collection(db, 'accounts'), {...formData, image: imageUrl})
+      await addDoc(collection(db, 'accounts'), {
+        ...formData,
+        image: imageUrl,
+        price: finalPrice,
+        sellerContact: finalContact
+      })
       setFormData({
         name: '',
         game: '',
         image: '',
         description: '',
         price: '',
+        currency: 'USD',
         sellerContact: ''
       })
       setFile(null)
@@ -83,6 +102,8 @@ const Page = () => {
         <div className="bg-[#1b2838] p-6 rounded-xl shadow-lg max-w-lg w-full">
           <h2 className="text-white text-2xl font-bold mb-4 text-center">Добавить аккаунт</h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            
+            {/* Название аккаунта */}
             <input 
               type="text" 
               name="name" 
@@ -92,6 +113,8 @@ const Page = () => {
               className="bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
               required
             />
+
+            {/* Название игры */}
             <input 
               type="text" 
               name="game" 
@@ -100,40 +123,73 @@ const Page = () => {
               placeholder="Название игры"
               className="bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
             />
+
+            {/* Изображение */}
             <input 
               type="file"
               accept="image/*"
               onChange={handleFileChange}
               className="text-white"
             />
-            <textarea
-  name="description" 
-  value={formData.description} 
-  onChange={handleChange} 
-  placeholder="Описание аккаунта (минимум 500 символов)"
-  className="bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4] resize-none h-32"
-  required
-  minLength={500}
-/>
 
-            <input 
-              type="number" 
-              name="price" 
-              value={formData.price} 
+            {/* Описание */}
+            <textarea
+              name="description" 
+              value={formData.description} 
               onChange={handleChange} 
-              placeholder="Цена $"
-              className="bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
+              placeholder="Описание аккаунта (минимум 100 символов)"
+              className="bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4] resize-none h-32"
               required
+              minLength={100}
             />
-            <input 
-              type="text" 
-              name="sellerContact" 
-              value={formData.sellerContact} 
-              onChange={handleChange} 
-              placeholder="Контакт продавца (Telegram/Email)"
-              className="bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
-              required
-            />
+
+            {/* Цена + Валюта */}
+            <div className="flex gap-2">
+              <input 
+                type="number" 
+                name="price" 
+                value={formData.price} 
+                onChange={handleChange} 
+                placeholder="Цена"
+                className="flex-1 bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
+                required
+              />
+              <select
+                name="currency"
+                value={formData.currency}
+                onChange={handleChange}
+                className="bg-[#2a475e] text-white px-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
+              >
+                <option value="USD">$ (USD)</option>
+                <option value="UZS">сум (UZS)</option>
+                <option value="RUB">₽ (RUB)</option>
+                <option value="KZT">₸ (KZT)</option>
+                <option value="EUR">€ (EUR)</option>
+              </select>
+            </div>
+
+            {/* Контакт */}
+            <div className="flex gap-2">
+              <select
+                value={contactType}
+                onChange={(e) => setContactType(e.target.value)}
+                className="bg-[#2a475e] text-white px-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
+              >
+                <option value="telegram">Telegram</option>
+                <option value="email">Email</option>
+              </select>
+              <input 
+                type="text" 
+                name="sellerContact" 
+                value={formData.sellerContact} 
+                onChange={handleChange} 
+                placeholder={contactType === "telegram" ? "@username" : "example@mail.com"}
+                className="flex-1 bg-[#2a475e] text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#66c0f4]"
+                required
+              />
+            </div>
+
+            {/* Кнопка */}
             <button 
               type="submit"
               disabled={loading}
@@ -145,18 +201,17 @@ const Page = () => {
         </div>
 
         {notif && (
-  <div className="fixed inset-0 flex items-center justify-center z-50">
-    <div className="bg-[#1b1b1b] border-l-4 border-green-500 text-white px-6 py-4 rounded-lg shadow-lg text-center">
-      ✅ Новый аккаунт добавлен!
-    </div>
-  </div>
-)}
-
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-[#1b1b1b] border-l-4 border-green-500 text-white px-6 py-4 rounded-lg shadow-lg text-center">
+              ✅ Новый аккаунт добавлен!
+            </div>
+          </div>
+        )}
       </main>
 
-        <div className="mt-[20px]">
-      <Footer />
-        </div>
+      <div className="mt-[20px]">
+        <Footer />
+      </div>
     </div>
   )
 }
