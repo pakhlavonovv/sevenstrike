@@ -10,7 +10,7 @@ const CardsMap = () => {
   const [accounts, setAccounts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [expanded, setExpanded] = useState({}); // qaysi card ochilganini saqlash uchun
+  const [expanded, setExpanded] = useState({}); 
 
   useEffect(() => {
     async function fetchAccounts() {
@@ -28,7 +28,7 @@ const CardsMap = () => {
         setAccounts(accountsList);
       } catch (error) {
         console.log(error);
-        setError("Ошибка при загрузке данных!");
+        setError("Ошибка при загрузке данных! Обновите страницу");
       } finally {
         setLoading(false);
       }
@@ -38,7 +38,6 @@ const CardsMap = () => {
 
   if (loading) return <LoadingCards />;
 
-  // descriptionni kesib olish
   const getShortDescription = (desc) => {
     const words = desc.split(" ");
     return words.slice(0, 20).join(" ");
