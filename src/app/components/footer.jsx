@@ -19,6 +19,7 @@ const Footer = () => {
               <li><Link href="/faq" className="text-gray-400 hover:text-white">Часто задаваемые вопросы</Link></li>
               <li><Link href="/rules" className="text-gray-400 hover:text-white">Правила</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white">Связаться</Link></li>
+                            <li><Link href="/sell" className="text-gray-400 hover:text-white">Торговать</Link></li>
             </ul>
           </div>
 

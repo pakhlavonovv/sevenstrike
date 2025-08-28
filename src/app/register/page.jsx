@@ -82,9 +82,20 @@ const handleGoogleRegister = async () => {
   if (localStorage.getItem("username")) {
     setMessage({
       type: "error",
-      text: `Вы уже зарегистрированы как "${localStorage.getItem("username")}"`,
+      text: (
+        <div className="flex flex-col items-center gap-2">
+          <span>
+            Вы уже зарегистрированы как "{localStorage.getItem("username")}"
+          </span>
+          <Link
+            href="/"
+            className="underline text-blue-400 hover:text-blue-600"
+          >
+            Перейти на главную
+          </Link>
+        </div>
+      ),
     });
-    setTimeout(() => router.push("/"), 2000);
     return;
   }
 
@@ -102,15 +113,42 @@ const handleGoogleRegister = async () => {
 
     localStorage.setItem("username", user.displayName);
 
-    setMessage({ type: "success", text: "Google регистрация успешна!" });
-    setTimeout(() => router.push("/"), 2000);
+    setMessage({
+      type: "success",
+      text: (
+        <div className="flex flex-col items-center gap-2">
+          <span>Google регистрация успешна!</span>
+          <Link
+            href="/"
+            className="underline text-green-400 hover:text-green-600"
+          >
+            Перейти на главную
+          </Link>
+        </div>
+      ),
+    });
   } catch (error) {
     console.error("Google error:", error.message);
     setMessage({
       type: "error",
-      text: "Не удалось зарегистрироваться через Google.",
+      text: (
+        <div className="flex flex-col items-center gap-2">
+          <span>Не удалось зарегистрироваться через Google.</span>
+          <button
+            onClick={() => window.location.reload()}
+            className="underline text-blue-400 hover:text-blue-600"
+          >
+            Повторить заново
+          </button>
+          <Link
+            href="/register"
+            className="underline text-blue-400 hover:text-blue-600"
+          >
+            Вернуться к регистрации
+          </Link>
+        </div>
+      ),
     });
-      setTimeout(() => router.push("/register"), 2000);
   }
 };
 

@@ -11,7 +11,6 @@ const Page = () => {
     <div className="container flex flex-col gap-4 md:gap-6 xl:flex-row xl:gap-8">
     <Image priority className="w-[100%] rounded-md order-2 xl:order-1 md:w-[90%] lg:w-[70%] xl:w-[60%]" width={600} height={600} src={'/images/dust.jpg'} alt="About image"/>
     <div className="flex flex-col gap-1 order-1 xl:order-2">
-    <i><h1 className="text-[18px] sm:text-[22px] md:text-[24px] font-bold lg:text-[28px] underline">SEVENSTRIKE</h1></i>
     <div className="flex flex-col gap-1 mt-1 sm:mt-3">
     <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
 
@@ -22,7 +21,7 @@ const Page = () => {
 Ежедневные и еженедельные турниры по CS2.
 Активное игровое сообщество, где можно общаться с другими игроками.
 Политику честной игры, которая гарантирует отсутствие читов.
-Присоединяйтесь к SevenStrike сегодня и превратите свою страсть к играм в реальные награды! 🚀🎮</p>
+Присоединяйтесь к SevenStrike сегодня и превратите свою страсть к играм в реальные награды! </p>
     </div>
     </div>
     </div>

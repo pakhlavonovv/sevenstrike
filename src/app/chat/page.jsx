@@ -1,20 +1,13 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import { db } from "../../../firebase-user";
-import {
-  collection,
-  addDoc,
-  query,
-  orderBy,
-  serverTimestamp,
-  onSnapshot,
-} from "firebase/firestore";
+import { collection, getDocs, addDoc, query, orderBy, serverTimestamp, onSnapshot } from "firebase/firestore";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Link from "next/link";
 import Image from "next/image";
 import Tournaments from "../../../public/images/CS.jpg";
-
+import CardsMap from '../components/cards_map'
 const randomColor = () =>
   `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`;
 
@@ -24,6 +17,7 @@ const Page = () => {
   const [notify, setNotify] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [accounts, setAccounts] = useState([]);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
@@ -59,6 +53,17 @@ const Page = () => {
   const formatTime = (date) => {
     return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   };
+  useEffect(() => {
+  const fetchAccounts = async () => {
+    const querySnapshot = await getDocs(collection(db, "accounts"));
+    const accs = querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    setAccounts(accs);
+  };
+  fetchAccounts();
+}, []);
 
   const handleSend = async () => {
     const username = localStorage.getItem("username");
@@ -112,7 +117,6 @@ const Page = () => {
 
       <div className="container">
         <div className="grid grid-cols-1 gap-2 items-center xl:grid-cols-[70%_30%]">
-          {/* Chat */}
           <div className="w-full h-[450px] bg-[#0000006d] flex flex-col gap-3 mt-[10px] p-2">
             <div className="p-2 sm:px-4 md:px-6 md:pt-4 w-full text-white h-full bg-[#0000009d] overflow-y-auto">
               {loading ? (
@@ -124,7 +128,7 @@ const Page = () => {
                     onClick={() => window.location.reload()}
                     className="underline text-blue-400 hover:text-blue-600"
                   >
-                    Обновить
+                    Обновите или регистрируйтесь
                   </button>
                 </div>
               ) : (
@@ -190,7 +194,9 @@ const Page = () => {
           </div>
         </div>
       </div>
-
+               <div className="container">
+    <CardsMap/>
+    </div>
       <div className="mt-[50px]">
         <Footer />
       </div>
